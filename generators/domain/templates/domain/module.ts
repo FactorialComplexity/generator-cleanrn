@@ -19,7 +19,7 @@ interface State {
 }
 
 // Module
-export default function compatModule (
+export default function <%= moduleName %>Module (
   storeManager: StoreManager
 ) {
   // Actions
@@ -62,3 +62,5 @@ export default function compatModule (
     }
   }
 }
+
+export type <%= moduleNameCapitalized %>Module = ReturnType<typeof <%= moduleName %>Module>
