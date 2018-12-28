@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Vitaliy Ivanov",
+      "authorEmail": "vitaliy.ivanov@factorialcomplexity.com",
+      "authorUrl": "https://factorialcomplexity.com"
+    }
+  }
+}
