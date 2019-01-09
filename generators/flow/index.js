@@ -23,7 +23,11 @@ module.exports = class extends Generator {
         name: 'navigatorType',
         message: 'Navigator for the flow',
         choices: [
-          'StackNavigator'
+          'StackNavigator',
+          'DrawerNavigator',
+          'BottomTabNavigator',
+          'MaterialBottomTabNavigator',
+          'MaterialTopTabNavigator'
         ]
       },
       {

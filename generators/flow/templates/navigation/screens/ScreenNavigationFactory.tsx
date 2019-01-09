@@ -9,15 +9,14 @@ export default function <%= screenBaseName %>ScreenNavigationFactory (<%= screen
   class <%= screenBaseName %>ScreenNavigation extends React.Component<{
     navigation: NavigationScreenProp<{}>
   }> {
-    static navigationOptions = { }
+    static navigationOptions = {}
 
     render () {
       const { navigation } = this.props
       return (
         <View style={{ flex: 1 }}>
           <StatusBar barStyle='dark-content' />
-          <<%= screenBaseName %>Screen
-          />
+          <<%= screenBaseName %>Screen />
         </View>
       )
     }

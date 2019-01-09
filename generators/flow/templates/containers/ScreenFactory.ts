@@ -7,16 +7,17 @@ import <%= screenBaseName %>ScreenView from '../views/<%= screenBaseName %>Scree
 
 export default function <%= screenBaseName %>ScreenFactory () {
   function mapStateToProps (state: any) {
-    return {
-    }
+    return {}
   }
 
   function mapDispatchToProps (dispatch: Dispatch) {
-    return bindActionCreators({
-    }, dispatch)
+    return bindActionCreators({}, dispatch)
   }
 
-  return connect(mapStateToProps, mapDispatchToProps)(<%= screenBaseName %>ScreenView)
+  return connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(<%= screenBaseName %>ScreenView)
 }
 
 export type <%= screenBaseName %>Screen = ReturnType<typeof <%= screenBaseName %>ScreenFactory>

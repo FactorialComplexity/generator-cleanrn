@@ -11,17 +11,14 @@ import StoreManager from '_app/utils/StoreManager'
 // Payloads
 
 // State types
-interface State<%= moduleNameCapitalized %> {
-}
+interface State<%= moduleNameCapitalized %> {}
 
 interface State {
   <%= moduleName %>: State<%= moduleNameCapitalized %>
 }
 
 // Module
-export default function <%= moduleName %>Module (
-  storeManager: StoreManager
-) {
+export default function <%= moduleName %>Module (storeManager: StoreManager) {
   // Actions
   const actionCreator = actionCreatorFactory('<%= moduleName %>')
 
@@ -38,8 +35,7 @@ export default function <%= moduleName %>Module (
   })
 
   // Reducer
-  const initialState: State<%= moduleNameCapitalized %> = {
-  }
+  const initialState: State<%= moduleNameCapitalized %> = {}
 
   storeManager.addReducer('<%= moduleName %>', (state = initialState, action: Action): State<%= moduleNameCapitalized %> => {
     // if (isType(action, myAction)) {
