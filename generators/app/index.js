@@ -82,5 +82,8 @@ module.exports = class extends Generator {
       this.destinationPath('ios/' + params.applicationName + '.xcworkspace'),
       params
     )
+
+    // Save config
+    this.config.save()
   }
 }
