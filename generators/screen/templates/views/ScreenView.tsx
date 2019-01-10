@@ -1,7 +1,11 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
-class <%= screenBaseName %>ScreenView extends React.Component {
+interface Props {}
+
+interface State {}
+
+class <%= screenBaseName %>ScreenView extends React.Component<Props, State> {
   render () {
     return <View />
   }
