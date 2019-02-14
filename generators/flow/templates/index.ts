@@ -1,20 +1,31 @@
-import <%= navigatorBaseName %>NavigatorFactory from './navigation/<%= navigatorBaseName %>NavigatorFactory'
+import { create<%= navigatorType %> } from 'react-navigation'
 
-import <%= screenBaseName %>ScreenFactory from './containers/<%= screenBaseName %>ScreenFactory'
+<%_ if (screenBaseName.length) { _%>import <%= screenBaseName %>ScreenFactory from './containers/<%= screenBaseName %>ScreenFactory'
+import <%= screenBaseName %>ScreenNavigationFactory from './navigation/<%= screenBaseName %>ScreenNavigationFactory'
 
+<%_ } _%>
 // Types imports
 <%_ if (needsStoreManager) { _%>import StoreManager from '_app/utils/StoreManager'<%_ } _%>
 
 export default function <%= moduleName %>Module (<%_ if (needsStoreManager) { _%>storeManager: StoreManager<%_ } _%>) {
-  const <%= screenBaseName %>Screen = <%= screenBaseName %>ScreenFactory()
-
-  const <%= navigatorBaseName %>Navigator = <%= navigatorBaseName %>NavigatorFactory(<%= screenBaseName %>Screen)
+<%_ if (screenBaseName.length) { _%>
+  const createNavigator = () =>
+      create<%= navigatorType %>(
+      {
+        <%= screenBaseName %>: {
+          screen: <%= screenBaseName %>ScreenNavigationFactory(<%= screenBaseName %>ScreenFactory())
+        }
+      },
+      {
+        initialRouteName: '<%= screenBaseName %>'
+      }
+    )
+<%_ } else { _%>
+  const createNavigator = () => create<%= navigatorType %>({})
+<%_ } _%>
 
   return {
-    navigators: {
-      <%= navigatorBaseName %>Navigator
-    },
-    Navigator: <%= navigatorBaseName %>Navigator
+    createNavigator
   }
 }
 

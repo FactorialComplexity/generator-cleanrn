@@ -37,7 +37,7 @@ export default function <%= moduleName %>Module (storeManager: StoreManager) {
   // Reducer
   const initialState: State<%= moduleNameCapitalized %> = {}
 
-  storeManager.addReducer('<%= moduleName %>', (state = initialState, action: Action): State<%= moduleNameCapitalized %> => {
+  storeManager.addReducer('<%= moduleName %>', (state: State<%= moduleNameCapitalized %> = initialState, action: Action): State<%= moduleNameCapitalized %> => {
     // if (isType(action, myAction)) {
     //   return {
     //     ...state,

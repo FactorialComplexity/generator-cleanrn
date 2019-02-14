@@ -2,7 +2,7 @@ import React from 'react'
 import { View, StatusBar } from 'react-native'
 
 // Types imports
-import { <%= screenBaseName %>Screen } from '../../containers/<%= screenBaseName %>ScreenFactory'
+import { <%= screenBaseName %>Screen } from '../containers/<%= screenBaseName %>ScreenFactory'
 import { NavigationScreenProp, NavigationScreenOptions } from 'react-navigation'
 
 export default function <%= screenBaseName %>ScreenNavigationFactory (<%= screenBaseName %>Screen: <%= screenBaseName %>Screen) {

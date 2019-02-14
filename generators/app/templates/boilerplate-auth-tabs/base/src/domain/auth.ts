@@ -192,7 +192,7 @@ export default function authModule (
   // Reducer
   storeManager.addReducer(
     'auth',
-    (state = initialState, action: Action): StateAuth => {
+    (state: StateAuth = initialState, action: Action): StateAuth => {
       if (isType(action, loginWithEmail.started)) {
         return {
           ...state,
