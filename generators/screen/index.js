@@ -76,7 +76,7 @@ module.exports = class extends Generator {
     this.log(chalk.yellow(`Navigator routes:`))
     this.log(`\n
     ${screenBaseName}: {
-      screen: ${screenBaseName}NavigationFactory(${screenBaseName}ScreenFactory())
+      screen: ${screenBaseName}ScreenNavigationFactory(${screenBaseName}ScreenFactory())
     }
     \n\n`)
   }
