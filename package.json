@@ -1,6 +1,6 @@
 {
   "name": "generator-cleanrn",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Code generators for Clean React Native architecture by Factorial Complexity.",
   "homepage": "https://github.com/FactorialComplexity/generator-cleanrn",
   "author": {

@@ -42,7 +42,7 @@ module.exports = class extends Generator {
 
     this.fs.copyTpl(
       this.templatePath('navigation/ScreenNavigationFactory.tsx'),
-      this.destinationPath(`src/presentation/${moduleName}/screens/${screenBaseName}ScreenNavigationFactory.tsx`),
+      this.destinationPath(`src/presentation/${moduleName}/navigation/${screenBaseName}ScreenNavigationFactory.tsx`),
       this.props
     )
 

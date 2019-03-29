@@ -10,7 +10,7 @@ import <%= screenBaseName %>ScreenNavigationFactory from './navigation/<%= scree
 export default function <%= moduleName %>Module (<%_ if (needsStoreManager) { _%>storeManager: StoreManager<%_ } _%>) {
 <%_ if (screenBaseName.length) { _%>
   const createNavigator = () =>
-      create<%= navigatorType %>(
+    create<%= navigatorType %>(
       {
         <%= screenBaseName %>: {
           screen: <%= screenBaseName %>ScreenNavigationFactory(<%= screenBaseName %>ScreenFactory())
